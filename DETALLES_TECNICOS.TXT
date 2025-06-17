@@ -1,0 +1,21 @@
+1.Crear el go mod 
+
+    go mod init turing-machine-go
+
+2. Llamar el repo de antlr 
+
+    go get github.com/antlr/antlr4/runtime/Go/antlr
+
+3. Crear el directorio de carpetas para desarrollar el trabajo en este caso la maquina de turing 
+
+        mkdir tm
+        mkdir grammar  // sitio especifico para la gramatica
+        mkdir parser   // sitio
+        mkdir visitor
+        mkdir examples
+        mkdir input
+4. 
+            Bash para ejecutar el antlr y compilar el lexer y la gramatica . g4
+            chmod +x generar_gramatica.sh 
+            ./generar_gramatica.sh
+

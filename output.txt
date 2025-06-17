@@ -1,0 +1,10 @@
+a 0 1 d b
+b 1 0 i c
+c _ 1 n d
+d 1 _ d x
+x 0 0 i y
+y 0 1 d z
+z _ 0 n z
+a 1 1 d f
+f 0 _ i g
+g 1 0 n z
