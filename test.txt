@@ -1,10 +1,12 @@
-en_el_estado_a, si_se_lee_un_cero, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_b
-en_el_estado_b, si_se_lee_un_uno, se_escribe_un_cero, se_mueve_hacia_la_izquierda, continua_en_el_estado_c
-en_el_estado_c, si_se_lee_un_blanco, se_escribe_un_uno, no_se_mueve, continua_en_el_estado_d
-en_el_estado_d, si_se_lee_un_uno, se_escribe_un_blanco, se_mueve_hacia_la_derecha, continua_en_el_estado_x
-en_el_estado_x, si_se_lee_un_cero, se_escribe_un_cero, se_mueve_hacia_la_izquierda, continua_en_el_estado_y
-en_el_estado_y, si_se_lee_un_cero, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_z
-en_el_estado_z, si_se_lee_un_blanco, se_escribe_un_cero, no_se_mueve, termina
-en_el_estado_a, si_se_lee_un_uno, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_f
-en_el_estado_f, si_se_lee_un_cero, se_escribe_un_blanco, se_mueve_hacia_la_izquierda, continua_en_el_estado_g
-en_el_estado_g, si_se_lee_un_uno, se_escribe_un_cero, no_se_mueve, termina
+en_el_estado_a, si_se_lee_un_cero, se_escribe_un_cero, se_mueve_hacia_la_derecha, continua_en_el_estado_a
+en_el_estado_a, si_se_lee_un_uno, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_b
+
+en_el_estado_b, si_se_lee_un_cero, se_escribe_un_cero, se_mueve_hacia_la_derecha, continua_en_el_estado_c
+en_el_estado_b, si_se_lee_un_uno, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_a
+
+en_el_estado_c, si_se_lee_un_cero, se_escribe_un_cero, se_mueve_hacia_la_derecha, continua_en_el_estado_b
+en_el_estado_c, si_se_lee_un_uno, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_c
+
+en_el_estado_a, si_se_lee_un_blanco, se_escribe_un_blanco, no_se_mueve, termina
+en_el_estado_b, si_se_lee_un_blanco, se_escribe_un_blanco, no_se_mueve, termina
+en_el_estado_c, si_se_lee_un_blanco, se_escribe_un_blanco, no_se_mueve, termina

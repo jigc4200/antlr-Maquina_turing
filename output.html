@@ -9,16 +9,15 @@
 <h2>Traducción de Instrucciones a Máquina de Turing</h2>
 <table>
 <tr><th>Instrucción (Lenguaje Natural)</th><th>Quíntupla (MT)</th></tr>
-<tr><td>en_el_estado_a, si_se_lee_un_cero, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_b</td><td>a 0 1 d b</td></tr>
-<tr><td>en_el_estado_b, si_se_lee_un_uno, se_escribe_un_cero, se_mueve_hacia_la_izquierda, continua_en_el_estado_c</td><td>b 1 0 i c</td></tr>
-<tr><td>en_el_estado_c, si_se_lee_un_blanco, se_escribe_un_uno, no_se_mueve, continua_en_el_estado_d</td><td>c _ 1 n d</td></tr>
-<tr><td>en_el_estado_d, si_se_lee_un_uno, se_escribe_un_blanco, se_mueve_hacia_la_derecha, continua_en_el_estado_x</td><td>d 1 _ d x</td></tr>
-<tr><td>en_el_estado_x, si_se_lee_un_cero, se_escribe_un_cero, se_mueve_hacia_la_izquierda, continua_en_el_estado_y</td><td>x 0 0 i y</td></tr>
-<tr><td>en_el_estado_y, si_se_lee_un_cero, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_z</td><td>y 0 1 d z</td></tr>
-<tr><td>en_el_estado_z, si_se_lee_un_blanco, se_escribe_un_cero, no_se_mueve, termina</td><td>z _ 0 n z</td></tr>
-<tr><td>en_el_estado_a, si_se_lee_un_uno, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_f</td><td>a 1 1 d f</td></tr>
-<tr><td>en_el_estado_f, si_se_lee_un_cero, se_escribe_un_blanco, se_mueve_hacia_la_izquierda, continua_en_el_estado_g</td><td>f 0 _ i g</td></tr>
-<tr><td>en_el_estado_g, si_se_lee_un_uno, se_escribe_un_cero, no_se_mueve, termina</td><td>g 1 0 n z</td></tr>
+<tr><td>en_el_estado_a, si_se_lee_un_cero, se_escribe_un_cero, se_mueve_hacia_la_derecha, continua_en_el_estado_a</td><td>a 0 0 d a</td></tr>
+<tr><td>en_el_estado_a, si_se_lee_un_uno, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_b</td><td>a 1 1 d b</td></tr>
+<tr><td></td><td>b 0 0 d c</td></tr>
+<tr><td>en_el_estado_b, si_se_lee_un_cero, se_escribe_un_cero, se_mueve_hacia_la_derecha, continua_en_el_estado_c</td><td>b 1 1 d a</td></tr>
+<tr><td>en_el_estado_b, si_se_lee_un_uno, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_a</td><td>c 0 0 d b</td></tr>
+<tr><td></td><td>c 1 1 d c</td></tr>
+<tr><td>en_el_estado_c, si_se_lee_un_cero, se_escribe_un_cero, se_mueve_hacia_la_derecha, continua_en_el_estado_b</td><td>a _ _ n z</td></tr>
+<tr><td>en_el_estado_c, si_se_lee_un_uno, se_escribe_un_uno, se_mueve_hacia_la_derecha, continua_en_el_estado_c</td><td>b _ _ n z</td></tr>
+<tr><td></td><td>c _ _ n z</td></tr>
 </table>
 </body>
 </html>

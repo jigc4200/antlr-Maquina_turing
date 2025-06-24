@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #0056b3;
+}
+
+.controls {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.controls label {
+    font-weight: bold;
+}
+
+.controls input[type="text"],
+.controls input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+.controls button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.machine-display {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.tape-container {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    padding-bottom: 10px; /* Espacio para el cabezal */
+}
+
+.tape {
+    display: flex;
+    justify-content: center; /* Centra las celdas de la cinta */
+    padding: 10px 0;
+    min-width: fit-content; /* Asegura que la cinta no se encoja */
+}
+
+.tape-cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #e9ecef;
+    margin: 0 2px;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.2);
+}
+
+.tape-cell.active {
+    background-color: #ffc107; /* Color para la celda activa */
+    border-color: #dc3545;
+    box-shadow: 0 0 8px rgba(255,193,7,0.8);
+}
+
+.head {
+    position: absolute;
+    top: -15px; /* Ajusta la posición vertical del cabezal para que esté encima de la celda */
+    /* left y transform se controlarán por JavaScript */
+    font-size: 2em;
+    color: #dc3545;
+    z-index: 10;
+    pointer-events: none; /* Permite hacer clic a través del cabezal */
+}
+
+.log-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 800px;
+}
+
+#executionLog {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    text-align: left;
+    white-space: pre-wrap; /* Permite saltos de línea */
+    word-wrap: break-word; /* Rompe palabras largas */
+}

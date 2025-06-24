@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Máquina de Turing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Visualizador de Máquina de Turing</h1>
+
+    <div class="controls">
+        <label for="inputTape">Cinta Inicial:</label>
+        <input type="text" id="inputTape" value="0011_">
+        <label for="rulesFile">Archivo de Reglas (output.txt):</label>
+        <input type="file" id="rulesFile" accept=".txt">
+        <button id="loadRules">Cargar Reglas</button>
+        <button id="resetMachine">Reiniciar</button>
+        <button id="stepMachine">Paso a Paso</button>
+        <button id="runMachine">Ejecutar</button>
+    </div>
+
+    <div class="machine-display">
+        <div class="tape-container">
+            <div id="tape" class="tape"></div>
+            <div id="head" class="head">▲</div>
+        </div>
+        <p>Estado Actual: <span id="currentState"></span></p>
+        <p>Pasos: <span id="stepsCount">0</span></p>
+    </div>
+
+    <div class="log-container">
+        <h2>Historial de Ejecución</h2>
+        <pre id="executionLog"></pre>
+    </div>
+
+    <script src="turing_visualizer.js"></script>
+</body>
+</html>
