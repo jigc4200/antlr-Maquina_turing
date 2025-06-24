@@ -3,7 +3,6 @@ package traductorturing
 import (
 	"fmt"
 	"turing-machine-go/parser" // o el path correcto de tu módulo
-	// Importar el paquete antlr
 )
 
 type Traductor struct {
@@ -14,7 +13,7 @@ type Traductor struct {
 func NewTraductor() *Traductor {
 	return &Traductor{
 		BaseTuringParserVisitor: &parser.BaseTuringParserVisitor{},
-		Tuplas:                  []string{}, // ← SOLUCIÓN AQUÍ
+		Tuplas:                  []string{},
 	}
 }
 
